@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CineFood</title>
+      <!--Import Materialize-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+      <!--Header Text-->    
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Moon+Dance&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
+
+      <!--Body Text-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Moon+Dance&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
+
+      <link rel="stylesheet" href="./img/style.css">
+  </head>
+  <body>
+    <header id="navhead">
+        <img id="logo" src="./img/images/cinefood.png" href="index.html">
+
+    </header>
+
+    <main>
+      <section class="title">
+        <h1>Need a plan for a movie and dinner tonight?</h1>
+        <h2> Having trouble choosing between options for dinner and a movie tonight?</h2>
+       
+        <p class="description">Choose what you wild youngsters are in the mood from the options below and click "Let's Go!"</p>
+      </section>
+      
+      <!--Questions & Dropboxes with values corresponding to API inputs-->
+  	 
+      <div class="selections">  
+        <div class="food">
+           <!--Cuisine Type-->
+          <label for="cuisineType">What type of cuisine is appealing for tonight's meal?</label>
+          <select name="cuisineType" id="cuisineType">
+            <option value="" disabled="" selected=""></option>
+            <option value="indian">Indian</option>
+            <option value="american">American</option>
+            <option value="asian">Asian</option>
+            <option value="mediterranean">Mediterranean</option>
+            <option value="kosher">Kosher</option>
+            <option value="italian">Italian</option>
+            <option value="mexican">Mexican</option>
+            
+          </select>
+          <!--Dietary Restrictions-->
+          <label for="dietaryRestrictions">Are there any specific dietary limitations or restrictions?</label>
+          <select name="dietaryRestrictions" id="dietaryRestrictions">
+            <option value="" disabled="" selected=""></option>
+            <option value="dairy-free">Dairy-Free</option>
+            <option value="gluten-free">Gluten-Free</option>
+            <option value="keto-friendly">Keto-Friendly</option>
+            <option value="vegan">Vegan</option>
+            <option value="vegetarian">Vegetarian</option>
+            <option value="peanut-free">Peanut-Free</option>
+          </select>
+        </div>
+
+        <!--Movie Genre--> 
+        <div class="movie">
+          <label for="movieGenre">What type of movie are you feeling like watching?</label>
+          <select name="movieGenre" id="movieGenre">
+            <option value="" disabled="" selected=“”></option>
+            <option value="28">Action</option>
+            <option value="35">Comedy</option>
+            <option value="18">Drama</option>
+            <option value="27">Horror</option>
+            <option value="10749">Romance</option>
+          </select>
+        </div> 
+
+        <button class="btn btn-info" id="choiceBtn">Let's Go!</button>
+
+        <br>
+
+        <section class="past-searches">
+          <h2>Check out previous meal and movie preferences!!</h2>
+          <!--Empty ul to append li's to-->
+          <ul id="stored-searches"></ul>
+
+          <!-- Trigger/Open The Modal -->
+          <button class="btn btn-info" id="clearBtn">Clear History</button>
+
+          <!-- The Modal -->
+          <div id="clearModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Are you prepared for the level of commitment required to proceed and potentially delete all your past plans?</p>
+              <div class="yes-no">
+                <button id="no" class="btn">NO</button> <button id="yes" class="btn">YES</button>
+              </div>
+            </div>
+          </div>
+         </section>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="./img/script.js"></script>
+    
+  </body>
+
+</html>
+
+
